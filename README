@@ -1,0 +1,14 @@
+Proxy Ganglia Gmond queryies to sFlow-RT REST API
+
+Install proxy on same host running sflow-rt daemon:
+
+sudo cp gmond_proxy.py /etc/init.d/
+sudo service gmond_proxy.py start
+
+Test proxy:
+telnet localhost 8649
+
+Configure Ganglia gmetad to poll proxy for cluster metrics.
+
+For more information, visit:
+http://www.sFlow-RT.com
